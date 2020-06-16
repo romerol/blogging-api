@@ -4,7 +4,9 @@
   "description": "API to create, list and delete blog posts",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "eslint": "eslint",
+    "start": "node index.js",
+    "test": "mocha resources/**/tests/**/*.js --exit"
   },
   "repository": {
     "type": "git",
@@ -21,6 +23,14 @@
   },
   "homepage": "https://github.com/romerol/blogging-api#readme",
   "devDependencies": {
-    "mocha": "^8.0.1"
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-mocha": "^7.0.1",
+    "mocha": "^8.0.1",
+    "supertest": "^4.0.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
