@@ -1,0 +1,26 @@
+{
+  "name": "blogging-api",
+  "version": "1.0.0",
+  "description": "API to create, list and delete blog posts",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/romerol/blogging-api.git"
+  },
+  "keywords": [
+    "blog",
+    "API"
+  ],
+  "author": "romerol",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/romerol/blogging-api/issues"
+  },
+  "homepage": "https://github.com/romerol/blogging-api#readme",
+  "devDependencies": {
+    "mocha": "^8.0.1"
+  }
+}
