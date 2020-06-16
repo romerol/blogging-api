@@ -99,16 +99,11 @@
   "definitions": {
     "Post": {
       "required": [
-        "_id",
         "title",
         "content",
         "author"
       ],
       "properties": {
-        "_id": {
-          "type": "string",
-          "uniqueItems": true
-        },
         "title": {
           "type": "string",
           "uniqueItems": true

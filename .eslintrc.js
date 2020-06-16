@@ -30,6 +30,24 @@ module.exports = {
         "prefer-arrow-callback": "off",
         "func-names": "off"
       }
+    },
+    {
+      files: [
+        "db/models/index.js"
+      ],
+      rules: {
+        "import/no-dynamic-require": "off",
+        "global-require": "off",
+        "arrow-body-style": "off"
+      }
+    },
+    {
+      files: [
+        "./index.js"
+      ],
+      rules: {
+        "no-console": "off"
+      }
     }
   ]
 };
