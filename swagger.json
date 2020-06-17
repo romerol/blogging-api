@@ -52,7 +52,19 @@
             "schema": {
               "$ref": "#/definitions/CreatedPost"
             }
-          }
+          },
+          "400": {
+            "description": "Wrong payload error",
+            "schema": {
+              "$ref": "#/definitions/Message"
+            }
+          },
+          "409": {
+            "description": "Data value conflict",
+            "schema": {
+              "$ref": "#/definitions/Message"
+            }
+          }                    
         }
       },
       "get": {
@@ -117,7 +129,7 @@
         },
         "status": {
           "type": "string",
-          "enum": ["draft, private, public"]
+          "enum": ["draft", "private", "public"]
         }
       }
     },
@@ -152,7 +164,7 @@
         },
         "status": {
           "type": "string",
-          "enum": ["draft, private, public"]
+          "enum": ["draft", "private", "public"]
         },        
         "createdAt": {
           "type": "string"
@@ -182,6 +194,16 @@
           "type": "string"
         }                        
       }      
-    }    
+    },
+    "Message": {
+      "required": [
+        "message"
+      ],
+      "properties": {
+        "message": {
+          "type": "string"
+        }                        
+      }      
+    }        
   }
 }
