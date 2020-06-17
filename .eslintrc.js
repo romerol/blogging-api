@@ -19,7 +19,8 @@ module.exports = {
     "import/newline-after-import": "off",
     quotes: [2, "double", { avoidEscape: true }],
     "comma-dangle": "off",
-    "no-underscore-dangle": "off"
+    "no-underscore-dangle": "off",
+    "mocha/no-hooks-for-single-case": "off"
   },
   overrides: [
     {

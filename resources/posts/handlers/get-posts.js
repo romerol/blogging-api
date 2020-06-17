@@ -16,7 +16,7 @@ class CreatePostHandler {
       res.status(200).send(blogPosts);
     } catch (e) {
       this.logger("::get-posts.js::error: ", e);
-      res.status(500).send([]);
+      res.status(500).send({ message: "Please contact support" });
     }
   }
 }
