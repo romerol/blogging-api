@@ -32,7 +32,7 @@
         "tags": [
           "Posts"
         ],
-        "description": "Creates a new blog post",
+        "summary": "Creates a new blog post",
         "parameters": [
           {
             "name": "post",
@@ -50,7 +50,7 @@
           "200": {
             "description": "A new blog post is created",
             "schema": {
-              "$ref": "#/definitions/Post"
+              "$ref": "#/definitions/CreatedPost"
             }
           }
         }
@@ -87,9 +87,9 @@
         ],
         "responses": {
           "200": {
-            "description": "The blog post is deleted",
+            "description": "The blog post will be deleted if it is found",
             "schema": {
-              "$ref": "#/definitions/Post"
+              "$ref": "#/definitions/DeleteResponse"
             }
           }
         }
@@ -118,7 +118,60 @@
     },
     "Posts": {
       "type": "array",
-      "$ref": "#/definitions/Post"
-    }
+      "$ref": "#/definitions/CreatedPost"
+    },
+    "CreatedPost": {
+      "required": [
+        "_id",
+        "title",
+        "content",
+        "author",
+        "createdAt",
+        "updatedAt"
+      ],
+      "properties": {
+        "_id": {
+          "type": "string",
+          "uniqueItems": true
+        },
+        "title": {
+          "type": "string",
+          "uniqueItems": true
+        },
+        "content": {
+          "type": "string"
+        },
+        "author": {
+          "type": "string"
+        },
+        "createdAt": {
+          "type": "string"
+        },
+        "updatedAt": {
+          "type": "string"
+        },
+        "__v": {
+          "type": "number"
+        }                        
+      }      
+    },
+    "DeleteResponse": {
+      "required": [
+        "n",
+        "ok",
+        "deletedCount"
+      ],
+      "properties": {
+        "n": {
+          "type": "string"
+        },
+        "ok": {
+          "type": "string"
+        },
+        "deletedCount": {
+          "type": "string"
+        }                        
+      }      
+    }    
   }
 }
