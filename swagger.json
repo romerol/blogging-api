@@ -101,7 +101,8 @@
       "required": [
         "title",
         "content",
-        "author"
+        "author",
+        "status"
       ],
       "properties": {
         "title": {
@@ -113,6 +114,10 @@
         },
         "author": {
           "type": "string"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["draft, private, public"]
         }
       }
     },
@@ -126,6 +131,7 @@
         "title",
         "content",
         "author",
+        "status",
         "createdAt",
         "updatedAt"
       ],
@@ -144,6 +150,10 @@
         "author": {
           "type": "string"
         },
+        "status": {
+          "type": "string",
+          "enum": ["draft, private, public"]
+        },        
         "createdAt": {
           "type": "string"
         },

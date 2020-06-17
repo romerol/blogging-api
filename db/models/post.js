@@ -18,6 +18,11 @@ class Post {
         type: String,
         required: true,
       },
+      status: {
+        type: String,
+        enum: ["draft", "private", "public"],
+        required: true
+      },
       __v: {
         type: Number,
         select: false

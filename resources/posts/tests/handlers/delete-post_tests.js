@@ -11,7 +11,8 @@ describe("DELETE /posts", function () {
     const postFixture = new db.Post({
       title: faker.random.word(),
       content: faker.random.word(),
-      author: faker.random.word()
+      author: faker.random.word(),
+      status: "draft"
     });
     const savedFixture = await postFixture.save();
     testPostId = savedFixture._id.toString();

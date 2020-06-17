@@ -12,7 +12,8 @@ describe("POST /posts", function () {
     const post = {
       title: "first post",
       content: faker.random.word(),
-      author: faker.random.word()
+      author: faker.random.word(),
+      status: "draft"
     };
     request(app)
       .post("/posts")
@@ -35,7 +36,8 @@ describe("POST /posts", function () {
     const post = {
       title: "first post",
       content: faker.random.word(),
-      author: faker.random.word()
+      author: faker.random.word(),
+      status: "draft"
     };
     return request(app)
       .post("/posts")
