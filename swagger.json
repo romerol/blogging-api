@@ -177,10 +177,12 @@
         },        
         "createdAt": {
           "type": "string",
+          "format": "date-time",
           "description": "The blog post timestamp in which it was created"
         },
         "updatedAt": {
           "type": "string",
+          "format": "date-time",
           "description": "The blog post timestamp in which it was updated"
         },
         "__v": {
