@@ -17,6 +17,10 @@ class Post {
       author: {
         type: String,
         required: true,
+      },
+      __v: {
+        type: Number,
+        select: false
       }
     };
   }

@@ -18,7 +18,8 @@ module.exports = {
   rules: {
     "import/newline-after-import": "off",
     quotes: [2, "double", { avoidEscape: true }],
-    "comma-dangle": "off"
+    "comma-dangle": "off",
+    "no-underscore-dangle": "off"
   },
   overrides: [
     {
