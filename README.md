@@ -8,7 +8,7 @@ API that allows to:
 ## Requirements
 
 - Node.js >= 8
-- MongoDB >= 3.4.10
+- MongoDB >= 3.4.10 listening in port 27017
 
 ## Usage
 
@@ -22,7 +22,7 @@ A database called `blog-db` will be created in the running mongo instance in loc
 After running the API with `npm start` the URL `http://localhost:8080/api-docs/` will be available to check:
 - available endpoints
 - the different models
-- and the possibility to try the endpoint in the UI.
+- and the possibility to try the endpoints in the UI.
 
 Trying the endpoints with the "docs UI" will hit a mongo database called `blog-db` that will be created automatically once a blog post is created.
 
