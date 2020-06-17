@@ -37,7 +37,7 @@
           {
             "name": "post",
             "in": "body",
-            "description": "Post data for the creation",
+            "description": "Payload for the creation",
             "schema": {
               "$ref": "#/definitions/Post"
             }
@@ -119,17 +119,21 @@
       "properties": {
         "title": {
           "type": "string",
+          "description": "The blog post title, it should be unique",
           "uniqueItems": true
         },
         "content": {
-          "type": "string"
+          "type": "string",
+          "description": "The blog post content"
         },
         "author": {
-          "type": "string"
+          "type": "string",
+          "description": "The reference to the author"
         },
         "status": {
           "type": "string",
-          "enum": ["draft", "private", "public"]
+          "enum": ["draft", "private", "public"],
+          "description": "The blog post status, it should be one of: draft, private, public"
         }
       }
     },
@@ -150,30 +154,38 @@
       "properties": {
         "_id": {
           "type": "string",
-          "uniqueItems": true
+          "uniqueItems": true,
+          "description": "The blog post unique identifier"
         },
         "title": {
           "type": "string",
-          "uniqueItems": true
+          "uniqueItems": true,
+          "description": "The blog post title, it is unique"
         },
         "content": {
-          "type": "string"
+          "type": "string",
+          "description": "The blog post content"
         },
         "author": {
-          "type": "string"
+          "type": "string",
+          "description": "The reference to the author"
         },
         "status": {
           "type": "string",
-          "enum": ["draft", "private", "public"]
+          "enum": ["draft", "private", "public"],
+          "description": "The blog post status, it is one of: draft, private, public"
         },        
         "createdAt": {
-          "type": "string"
+          "type": "string",
+          "description": "The blog post timestamp in which it was created"
         },
         "updatedAt": {
-          "type": "string"
+          "type": "string",
+          "description": "The blog post timestamp in which it was updated"
         },
         "__v": {
-          "type": "number"
+          "type": "number",
+          "description": "Document internal versioning"
         }                        
       }      
     },
@@ -185,13 +197,16 @@
       ],
       "properties": {
         "n": {
-          "type": "string"
+          "type": "string",
+          "description": "Indicates how many were found"
         },
         "ok": {
-          "type": "string"
+          "type": "string",
+          "description": "Indicates if the command ran ok"
         },
         "deletedCount": {
-          "type": "string"
+          "type": "string",
+          "description": "Indicates how many were deleted"
         }                        
       }      
     },
@@ -201,7 +216,8 @@
       ],
       "properties": {
         "message": {
-          "type": "string"
+          "type": "string",
+          "description": "Indicates what has happened"
         }                        
       }      
     }        
