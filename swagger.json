@@ -82,6 +82,31 @@
         }
       }
     },
+    "/posts/search": {
+      "parameters": [
+        {
+          "name": "text",
+          "in": "query",
+          "required": true,
+          "description": "The text to search for",
+          "type": "string"
+        }
+      ],
+      "get": {
+        "tags": [
+          "Posts"
+        ],
+        "summary": "Searches for blog posts",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Posts"
+            }
+          }
+        }
+      }
+    },    
     "/posts/{postId}": {
       "parameters": [
         {

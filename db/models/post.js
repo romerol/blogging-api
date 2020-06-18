@@ -33,6 +33,7 @@ class Post {
   static create({ mongoose }) {
     const { Schema } = mongoose;
     const postSchema = new Schema(Post.getSchema(), { timestamps: true });
+    postSchema.index({ title: "text", content: "text" });
     return mongoose.model(Post.collection(), postSchema);
   }
 }
