@@ -5,6 +5,7 @@ API that allows to:
 - list blog posts
 - delete a given blog post
 - search blog posts
+- create an author
 
 ## Requirements
 
