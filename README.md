@@ -1,15 +1,15 @@
 # blogging-api
 
 API that allows to:
-- create a blog post
-- list blog posts
-- delete a given blog post
-- search blog posts
-- create an author
+- create a blog post (title should be unique)
+- list all the blog posts
+- delete a given blog post by its Id
+- search blog posts by title and content
+- create an author with their name, email and password
 
 To do next:
 - authenticate an author with JWT
-- add security on create blog post and auto-assign author on post based on JWT.
+- add security on create blog post and auto-assign author in post based on JWT.
 
 ## Requirements
 
