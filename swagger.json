@@ -14,8 +14,12 @@
   "tags": [
     {
       "name": "Posts",
-      "description": "API posts"
-    }
+      "description": "posts resource"
+    },
+    {
+      "name": "Authors",
+      "description": "authors resource"
+    }    
   ],
   "schemes": [
     "http"
@@ -129,6 +133,47 @@
               "$ref": "#/definitions/DeleteResponse"
             }
           }
+        }
+      }
+    },
+    "/authors": {
+      "post": {
+        "tags": [
+          "Authors"
+        ],
+        "summary": "Creates a new author",
+        "parameters": [
+          {
+            "name": "author",
+            "in": "body",
+            "description": "Payload for the creation",
+            "schema": {
+              "$ref": "#/definitions/Author"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "A new author is created",
+            "schema": {
+              "$ref": "#/definitions/CreatedAuthor"
+            }
+          },
+          "400": {
+            "description": "Wrong payload error",
+            "schema": {
+              "$ref": "#/definitions/Message"
+            }
+          },
+          "409": {
+            "description": "Data value conflict",
+            "schema": {
+              "$ref": "#/definitions/Message"
+            }
+          }                    
         }
       }
     }
@@ -249,6 +294,50 @@
           "description": "Indicates what has happened"
         }                        
       }      
-    }        
+    },
+    "Author": {
+      "required": [
+        "name",
+        "email",
+        "password"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The author's full name"          
+        },
+        "email": {
+          "type": "string",
+          "description": "The author's email",
+          "uniqueItems": true
+        },
+        "password": {
+          "type": "string",
+          "description": "The password for the author user"
+        }
+      }
+    },
+    "CreatedAuthor": {
+      "required": [
+        "_id",
+        "name",
+        "email"
+      ],
+      "properties": {
+        "_id": {
+          "type": "string",
+          "description": "The author unique identifier"          
+        },
+        "name": {
+          "type": "string",
+          "description": "The author's full name"          
+        },
+        "email": {
+          "type": "string",
+          "description": "The author's email",
+          "uniqueItems": true
+        }
+      }
+    }                
   }
 }

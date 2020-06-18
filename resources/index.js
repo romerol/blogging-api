@@ -5,6 +5,7 @@ const GetPostsHandler = require("./posts/handlers/get-posts");
 const CreatePostHandler = require("./posts/handlers/create-post");
 const DeletePostHandler = require("./posts/handlers/delete-post");
 const SearchPostsHandler = require("./posts/handlers/search-posts");
+const CreateAuthorHandler = require("./authors/handlers/create-author");
 
 module.exports = function _resources({ app, logger, db }) {
   app.get("/posts", (req, res) => {
@@ -18,6 +19,10 @@ module.exports = function _resources({ app, logger, db }) {
   app.post("/posts", (req, res) => {
     const createPostHandler = new CreatePostHandler({ logger, db, validator });
     createPostHandler.create(req, res);
+  });
+  app.post("/authors", (req, res) => {
+    const createAuthorHandler = new CreateAuthorHandler({ logger, db, validator });
+    createAuthorHandler.create(req, res);
   });
   app.delete("/posts/:postId", (req, res) => {
     const deletePostHandler = new DeletePostHandler({ logger, db });
