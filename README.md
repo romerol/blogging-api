@@ -33,3 +33,4 @@ Trying the endpoints with the "docs UI" will hit a mongo database called `blog-d
 - The integration tests will use a database called `blog-db_test` that will be created automatically. 
 
 The API can be tested by running the unit and integration tests OR by using the Docs UI.
+The tests will run in port 8081 by default.
