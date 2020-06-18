@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const resources = require("./resources");
 const swaggerDocument = require("./swagger.json");
 const db = require("./db/models");
+const config = require("./config");
 
 app.use(bodyParser.urlencoded({
   extended: true
@@ -20,7 +21,7 @@ resources({
   logger: console.log
 });
 
-app.listen(process.env.PORT || 8080);
+app.listen(process.env.PORT || config.port);
 
 // exported for testing
 module.exports = {
