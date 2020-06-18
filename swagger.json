@@ -164,7 +164,9 @@
     },
     "Posts": {
       "type": "array",
-      "$ref": "#/definitions/CreatedPost"
+      "items": {
+        "$ref": "#/definitions/CreatedPost"
+      }
     },
     "CreatedPost": {
       "required": [
