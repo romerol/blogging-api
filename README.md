@@ -4,10 +4,11 @@ API that allows to:
 - create a blog post
 - list blog posts
 - delete a given blog post
+- search blog posts
 
 ## Requirements
 
-- Node.js >= 8
+- Node.js >= 12.16.3
 - MongoDB >= 3.4.10 listening in port 27017
 
 ## Usage
