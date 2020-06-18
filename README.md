@@ -7,6 +7,10 @@ API that allows to:
 - search blog posts
 - create an author
 
+To do next:
+- authenticate an author with JWT
+- add security on create blog post and auto-assign author on post based on JWT.
+
 ## Requirements
 
 - Node.js >= 12.16.3
